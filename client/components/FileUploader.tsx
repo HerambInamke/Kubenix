@@ -3,6 +3,7 @@
 import { useState } from "react";
 
 import { uploadFile } from "@/lib/api";
+import { Button } from "@/components/ui/Button";
 
 export function FileUploader() {
   const [file, setFile] = useState<File | null>(null);
@@ -28,13 +29,9 @@ export function FileUploader() {
         onChange={(e) => setFile(e.target.files?.[0] || null)}
         className="border p-2 w-full mb-4 rounded-lg"
       />
-      <button
-        onClick={handleUpload}
-        disabled={!file || uploading}
-        className="w-full bg-blue-600 text-white py-2 rounded-lg hover:bg-blue-700"
-      >
+      <Button className="w-full" onClick={handleUpload} disabled={!file || uploading}>
         {uploading ? "Uploading..." : "Upload File"}
-      </button>
+      </Button>
       {message && <p className="mt-3 text-sm text-gray-700">{message}</p>}
     </div>
   );

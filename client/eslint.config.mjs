@@ -1,3 +1,10 @@
+import nextConfig from "@eslint/js";
+import nextPlugin from "eslint-plugin-next";
+
+export default [
+  nextConfig.configs.recommended,
+  nextPlugin.configs["core-web-vitals"],
+];
 import { defineConfig, globalIgnores } from "eslint/config";
 import nextVitals from "eslint-config-next/core-web-vitals";
 import nextTs from "eslint-config-next/typescript";

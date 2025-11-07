@@ -10,7 +10,10 @@ export function Navbar() {
           InsightForge
         </Link>
         <div className="space-x-6">
-          <Link href="/upload" className="hover:text-blue-600">
+          <Link href="/dashboard" className="hover:text-blue-600">
+            Dashboard
+          </Link>
+          <Link href="/uploads" className="hover:text-blue-600">
             Upload
           </Link>
           <Link href="/insights" className="hover:text-blue-600">
